@@ -530,7 +530,6 @@ test.describe("Text area min and max characters text", () => {
       await textAreaWithMin5.fill("1234");
       await textAreaWithMax10.fill("12345678901");
       await textAreaWithMin5Max10.fill("1234");
-      await page.waitForTimeout(10000); // Wait for 10 seconds
       await submitForm();
       // Expect the text: Min. 5 characters to be visible
       expect(await page.locator(`text=Min. 5 characters required`).isVisible()).toBe(true);
